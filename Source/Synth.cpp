@@ -453,7 +453,10 @@ void Synth::loadPreset(PresetInfo preset) {
     auto block = addBlock(presetBlock.id.type, index, presetBlock.id.number);
 
     for (auto const& [key, val] : presetBlock.parameters) {
-      block->parameterMap[key]->audioParameter->setValue(val);
+        if (block->parameterMap.find(key) != block->parameterMap.end())
+        {
+            block->parameterMap[key]->audioParameter->setValue(val);
+        }
     }
 
     if (presetBlock.length > 1) {

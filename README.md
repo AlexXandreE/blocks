@@ -14,23 +14,15 @@
 **blocks is a modular synthesizer available as standalone, VST3 & AU for Windows, macOS & Linux.**
 </div>
 
-## How to build
+# Attention
 
-Download [CMake](https://cmake.org)
+This is a fork that is intent to be used for educational purposes. The original repository can be found [here](https://github.com/dan-german/blocks)
 
-Clone the repo
+## How to build - assuming commands are run from the repo root
 
-```
-git clone https://github.com/dan-german/blocks
-```
+Download [CMake](https://cmake.org) 3.22 or newer (Juce requires 3.22 or newer)
 
-Change to project directory
-
-```
-cd blocks
-```
-
-Populate [JUCE](https://juce.com)
+Populate [JUCE](https://juce.com) (Pointing to release 9.0.4)
 
 ```
 git submodule update --init
@@ -39,10 +31,10 @@ git submodule update --init
 Then build with CMake
 
 ```
-cmake -Bbuild -DCMAKE_BUILD_TYPE=Release
-cmake --build build --config Release
+cmake -Bbuild -DCMAKE_BUILD_TYPE=Debug
+cmake --build build --config Debug
 ```
-This will result in a release build in the build directory.
+This will result in a debug build in the build directory.
 
 For more detailed instructions please refer to the [JUCE CMake API](https://github.com/juce-framework/JUCE/blob/master/docs/CMake%20API.md)
 

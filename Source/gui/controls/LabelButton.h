@@ -12,7 +12,7 @@ public:
   LabelButton();
   ~LabelButton() override;
 
-  DrawablePath content;
+  Component content;
 
   Label text;
   Path p;

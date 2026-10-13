@@ -19,7 +19,7 @@ void SVGButton::setSVG(const void* svgData, const size_t svgDataNumBytes) {
 }
 
 void SVGButton::setButtonColour(Colour colour) {
-  drawableButton->getNormalImage()->replaceColour(_currentColor, colour);
+  drawableButton->getNormalImage()->getDrawable().replaceColour(_currentColor, colour);
   _currentColor = colour;
 }
 

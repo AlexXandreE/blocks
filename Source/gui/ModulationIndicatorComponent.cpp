@@ -7,7 +7,7 @@ ModulationIndicatorComponent::ModulationIndicatorComponent(float initalMagnitude
 
   currentPointColour = colour;
   currentValuePointPath.setFill(FillType(currentPointColour));
-  addAndMakeVisible(currentValuePointPath);
+  addAndMakeVisible(currentValuePointComponent);
 
   setMagnitude(magnitude, false);
 

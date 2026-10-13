@@ -120,11 +120,11 @@ std::optional<PresetInfo> PresetCoder::decode(std::string jsonString) {
 
   for (json& jsonModulation : presetInJson.at("modulations")) {
     PresetInfo::Modulation modulation;
-    modulation.target = jsonModulation.at("target");
-    modulation.source = jsonModulation.at("source");
+    modulation.target = jsonModulation.at("target").get<std::string>();
+    modulation.source = jsonModulation.at("source").get<std::string>();
     modulation.magnitude = jsonModulation.at("magnitude");
     modulation.bipolar = bool(jsonModulation.at("bipolar"));
-    modulation.parameter = jsonModulation.at("parameter");
+    modulation.parameter = jsonModulation.at("parameter").get<std::string>();
     modulation.number = jsonModulation.at("number");
 
     preset.modulations.add(modulation);

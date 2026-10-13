@@ -6,7 +6,7 @@ void DarkBackground::resized() { darkener.setPath(path); }
 DarkBackground::DarkBackground() {
   colour = Colour(0, 0, 0).withAlpha(0.0f);
   darkener.setFill(FillType(colour));
-  addAndMakeVisible(darkener);
+  addAndMakeVisible(darkenerComponent);
   setOpaque(false);
 }
 

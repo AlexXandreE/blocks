@@ -15,6 +15,7 @@ public:
   std::function<void(Component*)> onClick;
   Path path;
   DrawablePath darkener;
+  DrawableComponent darkenerComponent { darkener, BoundsToEnclose::drawableBounds };
   void setVisible(bool shouldBeVisible) override;
   DarkBackground();
   ~DarkBackground() override {};
